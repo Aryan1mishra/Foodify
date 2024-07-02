@@ -1,30 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div>
-      <nav className="bg-red-200 p-2 flex space-x-[50%] items-center">
+      <nav className="bg-red-200 p-2 flex space-x-10 items-center">
         <div className="">
-          <a className="m-2 font-bold text-2xl" href="/">
-            Navbar
-          </a>
+          <Link className="m-2 font-bold text-2xl" to="/">
+            Foodfiy
+          </Link>
         </div>
-        <ul className="flex space-x-[80%]">
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/">Home</a>
-        </li>
-      </ul>
+        <ul className="flex space-x-5">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li className="">
+            <Link to="/login">Login</Link>
+          </li>
+         
+        </ul>
       </nav>
-      
     </div>
   );
 }
